@@ -27,6 +27,10 @@ public class AirportQueue {
     }
 
     public Passenger viewFrontOfQueue() {
-        return null;
+        if(!priority.isEmpty()) {
+            return priority.peek();
+        } else {
+            return normal.peek();
+        }
     }
 }
